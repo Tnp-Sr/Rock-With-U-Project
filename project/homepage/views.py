@@ -4,6 +4,10 @@ from django.contrib import messages
 from .models import Menu
 
 
+#================= Global variable =================
+checkLogin = 0
+checkUser = 0
+username = ''
 
 #================= Class ================= 
 class Stack:
@@ -46,41 +50,86 @@ class sorting:
 
 
 
+
 #================= การทำงาน ================= 
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    return render(request,'index.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menu_P1(request):
-    return render(request,'menu1Recommend.html')
+    return render(request,'menu1Recommend.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menu_P2(request):
-    return render(request,'menu2Beef.html')
+    return render(request,'menu2Beef.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menu_P3(request):
-    return render(request,'menu3Chicken.html')
+    return render(request,'menu3Chicken.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menu_P4(request):
-    return render(request,'menu4Pork.html')
+    return render(request,'menu4Pork.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menu_P5(request):
-    return render(request,'menu5Fish.html')
+    return render(request,'menu5Fish.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menu_P6(request):
-    return render(request,'menu6Snack.html')
+    return render(request,'menu6Snack.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menu_P7(request):
-    return render(request,'menu7Icecream.html')
+    return render(request,'menu7Icecream.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menu_P8(request):
-    return render(request,'menu8Drink.html')
+    return render(request,'menu8Drink.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def menuSearch(request):
-    return render(request,'menuSearch.html')
+    return render(request,'menuSearch.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def registerForm(request): 
-    return render(request,'register.html')
+    return render(request,'register.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def addUser(request): 
     if request.method == 'POST':
@@ -140,7 +189,8 @@ def loginForm(request):
 def login(request):
     if request.method == 'POST':
       # ================= รับข้อมูลจาก form ใน login.html ================= 
-      checkLogin = 0
+      global checkLogin 
+      global username
       username = request.POST['username']
       password = request.POST['password']
 
@@ -178,22 +228,53 @@ def login(request):
     return render(request,'login.html')
 
 def logout(request): 
-    return render(request,'index.html',{'checkLogin': 0})
+    global checkLogin
+
+    checkLogin = 0
+    return render(request,'index.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })
 
 def orderHistory(request):
-    return render(request,'orderHistory.html')
+    return render(request,'orderHistory.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })
 
 def orderQueue(request):
-    return render(request,'orderQueue.html')
+    return render(request,'orderQueue.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })
 
 def queueDetail(request):
-    return render(request,'orderQueue.html')    
+    return render(request,'orderQueue.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def orderInfo(request):
-    return render(request,'orderInfo.html')
+    return render(request,'orderInfo.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def cartDetails(request):
-    return render(request,'cartDetails.html')
+    return render(request,'cartDetails.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
 
 def thanks(request):
-    return render(request,'thanks.html')
+    return render(request,'thanks.html',
+    {
+        'checkLogin' : checkLogin,
+        'username' : username
+    })   
