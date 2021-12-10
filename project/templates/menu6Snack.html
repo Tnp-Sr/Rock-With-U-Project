@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class = "container">
+          <section>
+               <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+    
+      <!-- First Photo Grid-->
+      <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        <div class="w3-quarter">
+          <img src="{% static 'images/menu/m61.jpg' %}" alt="Sandwich" style="width:100%">
+          <h4>เฟรนช์ฟรายส์</h4>
+          <p>69฿</p>
+          <a class="w3-bar-item w3-button w3-hover-yellow">เพิ่มลงตระกร้า</a>
+        </div>
+        <div class="w3-quarter">
+          <img src="{% static 'images/menu/m62.jpg' %}" alt="Steak" style="width:100%">
+          <h4>ไก่ทอด</h4>
+          <p>89฿</p>
+          <a class="w3-bar-item w3-button w3-hover-yellow">เพิ่มลงตระกร้า</a>
+        </div>
+        <div class="w3-quarter">
+          <img src="{% static 'images/menu/m63.jpg' %}" alt="Cherries" style="width:100%">
+          <h4>นักเก็ต</h4>
+          <p>79฿</p>
+          <a class="w3-bar-item w3-button w3-hover-yellow">เพิ่มลงตระกร้า</a>
+        </div>
+
+      <div class="w3-row-padding w3-padding-16 w3-center">
+        <div class="w3-quarter">
+          <img src="{% static 'images/menu/m64.jpg' %}" alt="Popsicle" style="width:100%">
+          <h4>ออเนียนริงส์</h4>
+          <p>59฿</p>
+          <a class="w3-bar-item w3-button w3-hover-yellow">เพิ่มลงตระกร้า</a>
+        </div>
+        <div class="w3-quarter">
+          <img src="{% static 'images/menu/m65.jpg' %}" alt="Salmon" style="width:100%">
+          <h4>ชีสบอล</h4>
+          <p>79฿</p>
+          <a class="w3-bar-item w3-button w3-hover-yellow">เพิ่มลงตระกร้า</a>
+        </div>
+               </div>
+  
+        
+      </div>
+    
+      <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a href="/menu_P1" class="w3-bar-item w3-button w3-hover-black">«</a>
+          <a href="/menu_P1" class="w3-bar-item w3-button w3-hover-black">1</a>
+          <a href="/menu_P2" class="w3-bar-item w3-button w3-hover-black">2</a>
+          <a href="/menu_P3" class="w3-bar-item w3-button w3-hover-black">3</a>
+          <a href="/menu_P4" class="w3-bar-item w3-button w3-hover-black">4</a>
+          <a href="/menu_P5" class="w3-bar-item w3-button w3-hover-black">5</a>
+          <a href="/menu_P6" class="w3-bar-item w3-black w3-button">6</a>
+          <a href="/menu_P7" class="w3-bar-item w3-button w3-hover-black">7</a>
+          <a href="/menu_P8" class="w3-bar-item w3-button w3-hover-black">8</a>
+          <a href="/menu_P8" class="w3-bar-item w3-button w3-hover-black">»</a>
+        </div>
+      </div>
+      
+      <hr id="about">
+      <hr>
+
+    <!-- End page content -->
+          </section>
+
+      </div>
+
+{% endblock %}
