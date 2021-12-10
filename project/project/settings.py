@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,11 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static')
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'staic','media')
 
 # Application definition
 
@@ -83,12 +77,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'storedb',
-        'USER':'root',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'PORT':''
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

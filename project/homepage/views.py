@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from .models import Menu
-from homepage.models import Category,Product
 
 
 
@@ -56,7 +55,6 @@ def index(request):
 def menu_P1(request):
     return render(request,'menu1Recommend.html')
 
-<<<<<<< HEAD
 def menu_P2(request):
     return render(request,'menu2Beef.html')
 
@@ -80,12 +78,6 @@ def menu_P8(request):
 
 def menuSearch(request):
     return render(request,'menuSearch.html')
-=======
-def menu(request):
-    products = None
-    products = Product.objects.all().filter(available=True)
-    return render(request,'menu.html',{'products' : products})
->>>>>>> 979672a482ba1a6a4fb73d98afa18c3c36e451d8
 
 def registerForm(request): 
     return render(request,'register.html')
