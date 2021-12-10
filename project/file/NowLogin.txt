@@ -1,1 +1,3 @@
-True
+0-ยังไม่login 
+1-login user
+2-login admin 
