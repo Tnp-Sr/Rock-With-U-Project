@@ -97,21 +97,13 @@
                             </div>
         
                             <div class="buttons">
-                                <div class="pull-right"><a href="checkout.html" >  <form class="" action="" method="POST">
-                                    {% csrf_token %}
-                                    <script src="https://checkout.stripe.com/checkout.js"
-                                    class="stripe-button"
-                                    data-key="{{ data_key }}"
-                                    data-amount="{{ stripe_total }}"
-                                    data-name="Rock with U"
-                                    data-description="{{ description }}"
-                                    data-locale="thailand"
-                                    data-currency="thb"
-                                    data-shipping-address="true"
-                                    data-billing-address="true"
-                                    data-zip-code="true">
-                                    </script>
-                                </form></a></div>
+                                <div class="pull-right"><a href="/thanks" >  
+                                    <div class="container-login100-form-btn">
+                                        <button class="login100-form-btn">
+                                            confirm order
+                                        </button>
+                                    </div>
+
                             </div>
                         </div>
                         <!--Middle Part End -->
